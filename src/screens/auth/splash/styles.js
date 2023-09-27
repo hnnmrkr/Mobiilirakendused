@@ -13,5 +13,8 @@ export const styles = StyleSheet.create ({
     innerTitle: {
         color: '#FCA34D',
         textDecorationLine: 'underline'
+    },
+    container: {
+        padding: 36
     }
 })
