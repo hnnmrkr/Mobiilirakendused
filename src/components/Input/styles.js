@@ -13,13 +13,13 @@ export const styles = StyleSheet.create({
         alignItems: 'center'
     },
     input: {
-        borderWidth: 1,
         paddingHorizontal: 16,
-        paddingVertical: 20
+        paddingVertical: 20,
+        flex: 1
     },
     label: {
         marginBottom: 8,
-        colors: colors.blue,
+        color: colors.blue,
         fontWeight: '500'
     },
     eye: {
