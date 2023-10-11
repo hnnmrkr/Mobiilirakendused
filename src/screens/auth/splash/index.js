@@ -24,7 +24,7 @@ const onSignin = () => {
             
             <Button onPress={onSignup} title="Sign Up" />
 
-            <Button onPress={onSignin} title="Sign in"/>
+            <Link onPress={onSignin} title="Sign in"/>
         </View>
     )
 }

@@ -7,11 +7,10 @@ import Button from "../../../components/Button";
 import Separator from "../../../components/Separator";
 import { styles } from "./styles";
 import GoogleLogin from "../../../components/GoogleLogin";
-import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Signin = () => {
-    const [checked, setChecked] = useState(true)
+    const [checked, setChecked] = useState(false)
 
     return (
         <SafeAreaView>
