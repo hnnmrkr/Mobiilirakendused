@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { styles } from "./styles";
-
+import {styles} from "./styles"
+ 
 const Profile = () => {
-    return (
+    return(
         <SafeAreaView>
-            <View style={styles.container} />
-            <Text>Profile</Text>
+            <View style={styles.container}>
+                <Text>Profile</Text>
+            </View>
         </SafeAreaView>
     )
 }
