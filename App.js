@@ -8,6 +8,7 @@ import SignUp from "./src/screens/auth/sign-up";
 import Home from "./src/screens/app/Home/index";
 import Profile from "./src/screens/app/Profile/index";
 import Favorites from "./src/screens/app/Favorites/index";
+import ProductDetails from "./src/screens/app/ProductDetails";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -70,6 +71,7 @@ return (
           isSignedIn ? (
             <>
             <Stack.Screen name="Tabs" component={Tabs} options={{headerShown: false}} />
+            <Stack.Screen name="ProductDetails" component={ProductDetails} options={{headerShown:false}} />
             </>
           ) : (
             <>

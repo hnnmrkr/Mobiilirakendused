@@ -8,7 +8,7 @@ import { products } from "../../../data/products";
 import CategoryBox from "../../../components/CategoryBox";
 import ProductHomeItem from "../../../components/ProductHomeItem";
 
-const Home = () => {
+const Home = ({navigation}) => {
     const [selectedCategory, setSelectedCategory] = useState()
     const [keyword, setKeyword] = useState()
     const [selectedProducts, setSelectedProducts] = useState(products)
@@ -41,15 +41,17 @@ const Home = () => {
         )
     }
 const renderProductItem = ({item}) => {
-    console.log('item =>', item)
+    const onProductPress = (product) => {
+        navigation.navigate('ProductDetails', {product})
+    }
     return (
-        <ProductHomeItem {...item} />
+        <ProductHomeItem onPress={() => onProductPress(item)} {...item} />
     )
 }
     return(
         <SafeAreaView>
             <View style={styles.container}>
-                <Header showSearch={true} onSearchKeyWord={setKeyword} keyword={keyword} title="Find All You Need" />
+                <Header showSearch={true} onSearchKeyword={setKeyword} keyword={keyword} title="Find All You Need" />
 
                 <FlatList showsHorizontalScrollIndicator={false} style ={styles.list} horizontal data={categories} renderItem={renderCategoryItem} keyExtractor={(item, index) =>String(index)} />
                 <FlatList numColumns={2} data={selectedProducts} renderItem={renderProductItem} keyExtractor={(item) => String(item.id)} ListFooterComponent={<View style={{height: 250}}/>} />
