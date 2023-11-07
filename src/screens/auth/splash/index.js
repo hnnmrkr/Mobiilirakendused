@@ -22,7 +22,7 @@ const onSignin = () => {
             <Text style={[styles.title, styles.innerTitle]}>All you need</Text>
             <Text style={styles.title}>Here!</Text>
             
-            <Button onPress={onSignup} title="Sign Up" />
+            <Button style={{flex: 0, width: '100%'}} onPress={onSignup} title="Sign Up" />
 
             <Link onPress={onSignin} title="Sign in"/>
         </View>

@@ -9,6 +9,11 @@ import GoogleLogin from "../../../components/GoogleLogin";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignIn = ({navigation}) => {
+    const [checked, setChecked] = useState(false);
+
+    const onSignup = () => {
+        navigation.navigate('Signup')
+    }
 
     const onBack = () => {
         navigation.goBack()
@@ -21,7 +26,7 @@ const SignIn = ({navigation}) => {
             <Button style={styles.button} title="Sign In"/>
             <Separator text="Or sign in with" />
             <GoogleLogin />
-            <Text style={styles.footerText}>Don't have an account?
+            <Text onPress={onSignup} style={styles.footerText}>Don't have an account?
                 <Text style={styles.footerLink}> Sign Up</Text>
             </Text>
         </SafeAreaView>
